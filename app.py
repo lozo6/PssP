@@ -5,9 +5,9 @@ import os
 
 load_dotenv()
 
-mysql_username = os.getenv("MYSQL_USERNAME")
-mysql_password = os.getenv("MYSQL_PASSWORD")
-mysql_host = os.getenv("MYSQL_HOST")
+mysql_username = os.getenv("AZURE_MYSQL_USERNAME")
+mysql_password = os.getenv("AZURE_MYSQL_PASSWORD")
+mysql_host = os.getenv("AZURE_MYSQL_HOSTNAME")
 
 db = SQLAlchemy()
 app = Flask(__name__)
