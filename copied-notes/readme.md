@@ -19,9 +19,9 @@
 
 ## ENV file structure: 
 ```
-MYSQL_USERNAME = "SDF"
-MYSQL_PASSWORD = "fSDFDF!"
-MYSQL_HOST = "104.343.111.186"
+MYSQL_USERNAME = "root"
+MYSQL_PASSWORD = "password!"
+MYSQL_HOST = "0.0.0.0"
 ```
 
 
