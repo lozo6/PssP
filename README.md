@@ -26,15 +26,15 @@ Screen shot of the updated modal window for the NEW PATIENT action from the /pat
 
 # How to use repo
 
-This is a CRUD applicationn templated from u/hantswilliams (add link here)
+This is a CRUD applicationn templated from [/hantswilliams](https://github.com/hantswilliams/HHA-504-2022/tree/main/Part6_CRUD)
 
 ## What is CRUD?
 
 ```
-**C**reate
-**R**ead
-**U**pdate
-**D**elete
+Create
+Read
+Update
+Delete
 ```
 
 CRUD applications are created to learn the basics of backend database.
