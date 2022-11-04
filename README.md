@@ -70,4 +70,4 @@ For macOS Silicon:
 `mysql+pymysql` # It is better to use `pymysql` module for M1 Mac devices
 
 
-Once all these have been set up, you are set and you now use all features of the applications. Please refer to [screenshots]('screenshots')
+Once all these have been set up, you are set and you now use all features of the applications. Please refer to screenshots directory
