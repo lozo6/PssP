@@ -9,6 +9,7 @@ load_dotenv()
 mysql_username = os.getenv("MYSQL_USERNAME")
 mysql_password = os.getenv("MYSQL_PASSWORD")
 mysql_host = os.getenv("MYSQL_HOSTNAME")
+mysql_database = os.getenv("MYSQL_DATABASE")
 secret_key = os.getenv("SECRET_KEY")
 
 db = SQLAlchemy()
