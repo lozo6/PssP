@@ -9,20 +9,21 @@ load_dotenv()
 mysql_username = os.getenv("MYSQL_USERNAME")
 mysql_password = os.getenv("MYSQL_PASSWORD")
 mysql_host = os.getenv("MYSQL_HOSTNAME")
+secret_key = os.getenv("SECRET_KEY")
 
 db = SQLAlchemy()
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + mysql_username + ':' + mysql_password + '@' + mysql_host + ':3306/patient_portal'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'sdf#$#dfjkhdf0SDJH0df9fd98343fdfu34rf'
+app.secret_key = secret_key
 
 db.init_app(app)
 
 
 ### Models ###
 class Patients(db.Model):
-    __tablename__ = 'production_patients'
+    __tablename__ = 'patients'
 
     id = db.Column(db.Integer, primary_key=True)
     mrn = db.Column(db.String(255))
@@ -51,7 +52,7 @@ class Patients(db.Model):
         }
 
 class Conditions_patient(db.Model):
-    __tablename__ = 'production_patient_conditions'
+    __tablename__ = 'patient_conditions'
 
     id = db.Column(db.Integer, primary_key=True)
     mrn = db.Column(db.String(255), db.ForeignKey('production_patients.mrn'))
@@ -71,7 +72,7 @@ class Conditions_patient(db.Model):
         }
 
 class Conditions(db.Model):
-    __tablename__ = 'production_conditions'
+    __tablename__ = 'conditions'
 
     id = db.Column(db.Integer, primary_key=True)
     icd10_code = db.Column(db.String(255))
@@ -91,7 +92,7 @@ class Conditions(db.Model):
         }
 
 class Medications_patient(db.Model):
-    __tablename__ = 'production_patient_medications'
+    __tablename__ = 'patient_medications'
 
     id = db.Column(db.Integer, primary_key=True)
     mrn = db.Column(db.String(255), db.ForeignKey('production_patients.mrn'))
@@ -111,7 +112,7 @@ class Medications_patient(db.Model):
         }
 
 class Medications(db.Model):
-    __tablename__ = 'production_medications'
+    __tablename__ = 'medications'
 
     id = db.Column(db.Integer, primary_key=True)
     med_ndc = db.Column(db.String(255))
